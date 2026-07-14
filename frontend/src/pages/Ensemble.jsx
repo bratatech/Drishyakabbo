@@ -19,9 +19,9 @@ export default function Ensemble() {
   return (
     <>
       <PageHeader title="Ensemble" subtitle="Cast, Direction & Tech" />
-      <section className="container grid">
+      <section className="container ensemble-grid">
         {all.map(m => (
-          <div className="card" key={m.id}>
+          <div className="ensemble-card" key={m.id}>
             <img src={m.image} alt={m.name} />
             <div className="body">
               <strong>{m.name}</strong>

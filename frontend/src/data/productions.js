@@ -19,9 +19,9 @@ const productions = [
   },
   {
     id: 'p4',
-    title: 'The Wall (দেওয়াল)',
+    title: 'Sampatti Samarpan (সম্পত্তি সমর্পণ)',
     tagline: 'Darkness within the home',
-    image: '/img4.jpeg'
+    image: '/img9.jpeg'
   }
 ]
 

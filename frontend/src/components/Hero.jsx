@@ -92,16 +92,17 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right column
-        <div className="hero-right">
-          <div className="hero-img-wrap">
-            <img className="hero-img" src="/img21.jpeg" alt="হরিনাভি দৃশ্যকাব্য — মঞ্চের একটি মুহূর্ত" />
-            <div className="hero-img-pill">
-              <div className="hero-img-pill-title">সাম্প্রতিক প্রযোজনা</div>
-              <div className="hero-img-pill-sub">Latest Production · 2024</div>
+        { /*Right column*/
+          <div className="hero-right">
+            <div className="hero-img-wrap">
+              <img className="hero-img"
+                src="/img25.jpeg" alt="হরিনাভি দৃশ্যকাব্য — মঞ্চের একটি মুহূর্ত" />
+              {/* <div className="hero-img-pill">
+                <div className="hero-img-pill-title">সাম্প্রতিক প্রযোজনা</div>
+                <div className="hero-img-pill-sub">Latest Production · 2024</div>
+              </div> */}
             </div>
-          </div>
-        </div> */}
+          </div>}
       </div>
 
       {/* Scroll hint */}
