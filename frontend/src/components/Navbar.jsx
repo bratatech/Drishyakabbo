@@ -3,14 +3,14 @@ import { NavLink, Link } from 'react-router-dom'
 import logo from '../assets/drishyakabya_final_logo-01.jpg.jpeg'
 
 const nav = [
-  { to: '/',            label: 'হোম',        en: 'Home' },
-  { to: '/productions', label: 'প্রযোজনা',   en: 'Productions' },
-  { to: '/events',      label: 'অনুষ্ঠান',   en: 'Events' },
-  { to: '/ensemble',    label: 'দল',         en: 'Ensemble' },
-  { to: '/gallery',     label: 'গ্যালারি',   en: 'Gallery' },
-  { to: '/blog',        label: 'ব্লগ',       en: 'Blog' },
-  { to: '/tickets',     label: 'টিকিট',      en: 'Tickets' },
-  { to: '/contact',     label: 'যোগাযোগ',    en: 'Contact' },
+  { to: '/', label: 'হোম', en: 'Home' },
+  { to: '/productions', label: 'প্রযোজনা', en: 'Productions' },
+  { to: '/events', label: 'অনুষ্ঠান', en: 'Events' },
+  { to: '/ensemble', label: 'দল', en: 'Ensemble' },
+  { to: '/gallery', label: 'গ্যালারি', en: 'Gallery' },
+  // { to: '/blog',        label: 'ব্লগ',       en: 'Blog' },
+  // { to: '/tickets',     label: 'টিকিট',      en: 'Tickets' },
+  // { to: '/contact',     label: 'যোগাযোগ',    en: 'Contact' },
 ]
 
 export default function Navbar() {
@@ -45,7 +45,7 @@ export default function Navbar() {
               {item.label}
             </NavLink>
           ))}
-          <Link
+          {/* <Link
             to="/signup"
             style={{
               background: 'linear-gradient(135deg,var(--sindoor),var(--primary2))',
@@ -58,7 +58,7 @@ export default function Navbar() {
             onMouseLeave={e => { e.currentTarget.style.filter = 'brightness(1)'; e.currentTarget.style.transform = 'translateY(0)' }}
           >
             যোগ দিন
-          </Link>
+          </Link> */}
         </nav>
       </div>
     </header>
