@@ -28,9 +28,9 @@ export default function Footer() {
           <div>
             <strong>Contact</strong>
             <div className="list section">
-              <a href="mailto:hello@drishyakabbo.org">hello@drishyakabbo.org</a>
-              <a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="drishyakabyaharinavi1@gmail.com">email</a>
+              {/*}<a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a>{*/}
+              <a href="https://youtube.com/@harinavidrishyakabya?si=jwTjtieg6pWwLGEU" target="_blank" rel="noreferrer">Youtube</a>
             </div>
           </div>
         </div>

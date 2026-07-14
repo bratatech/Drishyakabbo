@@ -1,27 +1,27 @@
 const productions = [
   {
     id: 'p1',
-    title: 'Achinpur',
+    title: 'Gili Gili Ge((গিলি গিলি গে)',
     tagline: "A procession of dreams through the city's veins",
-    image: 'https://images.unsplash.com/photo-1485560994238-1b5e58d27b84?q=80&w=1200&auto=format&fit=crop'
+    image: '/img1.jpeg'
   },
   {
     id: 'p2',
-    title: 'Kalbela',
+    title: 'Ghatak (ঘাতক)',
     tagline: 'Time within time',
-    image: 'https://images.unsplash.com/photo-1523246196603-5ef3be1f54b0?q=80&w=1200&auto=format&fit=crop'
+    image: '/img10.jpeg'
   },
   {
     id: 'p3',
-    title: 'Otherworld',
+    title: 'Kishorer Swapno (কিশোর স্বপ্ন)',
     tagline: 'A city like a poem',
-    image: 'https://images.unsplash.com/photo-1478476868527-002ae3f3e159?q=80&w=1200&auto=format&fit=crop'
+    image: '/img5.jpeg'
   },
   {
     id: 'p4',
-    title: 'The Wall',
+    title: 'The Wall (দেওয়াল)',
     tagline: 'Darkness within the home',
-    image: 'https://images.unsplash.com/photo-1518981867735-76f84f4e6ebc?q=80&w=1200&auto=format&fit=crop'
+    image: '/img4.jpeg'
   }
 ]
 
