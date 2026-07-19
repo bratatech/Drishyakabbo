@@ -72,8 +72,8 @@ export default function Hero() {
           </p>
 
           <div className="hero-cta">
-            <Link className="btn" to="/tickets">টিকিট বুক করুন &rarr;</Link>
-            <Link className="btn secondary" to="/productions">প্রযোজনা দেখুন</Link>
+            {/* <Link className="btn" to="/tickets">টিকিট বুক করুন &rarr;</Link>
+            <Link className="btn secondary" to="/productions">প্রযোজনা দেখুন</Link> */}
           </div>
 
           <div className="hero-stats">

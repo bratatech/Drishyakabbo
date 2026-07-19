@@ -6,7 +6,7 @@ export default function Gallery() {
   return (
     <>
       <PageHeader title="Gallery" subtitle="Glimpses from rehearsals and stage" />
-      <section className="container grid">
+      <section className="container gallery-grid">
         {gallery.map(g => (
           <div className="card" key={g.id}>
             <img src={g.image} alt={g.caption} />

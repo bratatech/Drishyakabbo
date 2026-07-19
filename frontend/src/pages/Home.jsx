@@ -45,19 +45,22 @@ function EventsSlideshow() {
         overflow: 'hidden',
         boxShadow: '0 16px 56px rgba(0,0,0,.65), 0 0 40px rgba(192,57,43,.18)',
         border: '1px solid rgba(212,175,55,.18)',
-        background: '#0a0709',
+        background: '#080507',
         userSelect: 'none',
+        /* Let height follow the image naturally */
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
     >
-      {/* Main slide image */}
+      {/* Main slide image — contain so the full photo is always visible */}
       <img
         src={SLIDE_IMAGES[current]}
         alt={`Event slide ${current + 1}`}
         style={{
           width: '100%',
-          height: 'clamp(300px, 50vw, 560px)',
-          objectFit: 'cover',
-          objectPosition: 'center',
+          maxHeight: 'clamp(320px, 75vw, 640px)',
+          objectFit: 'contain',   /* show full image, no cropping */
           display: 'block',
           opacity: fading ? 0 : 1,
           transition: 'opacity 0.3s ease',
@@ -233,12 +236,12 @@ export default function Home() {
       <section className="container" style={{ paddingTop: 0, paddingBottom: 0 }}>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
           gap: 16,
           background: 'var(--surface)',
           border: '1px solid var(--border)',
           borderRadius: 'var(--radius)',
-          padding: '32px 28px',
+          padding: 'clamp(16px, 4vw, 32px) clamp(14px, 3.5vw, 28px)',
         }}>
           {[
             { icon: '&#127917;', title: '&#x09AE;&#x099E;&#x09CD;&#x099A; &#x09A8;&#x09BE;&#x099F;&#x0995;', sub: 'Original Bengali plays' },
@@ -279,7 +282,7 @@ export default function Home() {
           background: 'linear-gradient(135deg, rgba(192,57,43,.18) 0%, rgba(212,175,55,.1) 100%)',
           border: '1px solid var(--border)',
           borderRadius: 'var(--radius)',
-          padding: '48px 40px',
+          padding: 'clamp(28px, 6vw, 48px) clamp(16px, 5vw, 40px)',
           textAlign: 'center',
           position: 'relative',
           overflow: 'hidden',
