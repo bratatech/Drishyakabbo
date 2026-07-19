@@ -15,19 +15,17 @@ const nav = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
-  const menuRef = useRef(null)
+  const wrapperRef = useRef(null)
 
-  /* Close menu on outside click */
+  /* Close menu on outside click — use pointerdown to avoid race with NavLink navigation */
   useEffect(() => {
     if (!open) return
     const handle = (e) => {
-      if (menuRef.current && !menuRef.current.contains(e.target)) setOpen(false)
+      if (wrapperRef.current && !wrapperRef.current.contains(e.target)) setOpen(false)
     }
-    document.addEventListener('mousedown', handle)
-    document.addEventListener('touchstart', handle)
+    document.addEventListener('pointerdown', handle)
     return () => {
-      document.removeEventListener('mousedown', handle)
-      document.removeEventListener('touchstart', handle)
+      document.removeEventListener('pointerdown', handle)
     }
   }, [open])
 
@@ -52,6 +50,8 @@ export default function Navbar() {
           border-radius: 9px;
           cursor: pointer;
           flex-shrink: 0;
+          touch-action: manipulation;
+          -webkit-tap-highlight-color: transparent;
         }
         .hamburger span {
           display: block;
@@ -93,6 +93,10 @@ export default function Navbar() {
           transition: color .2s, background .2s;
           text-align: center; width: 100%; max-width: 320px;
           text-decoration: none;
+          cursor: pointer;
+          touch-action: manipulation;
+          -webkit-tap-highlight-color: transparent;
+          display: block;
         }
         .mobile-nav-link:hover,
         .mobile-nav-link.active { color: var(--accent); background: rgba(212,175,55,.08); }
@@ -105,6 +109,8 @@ export default function Navbar() {
           border-radius: 50%; cursor: pointer;
           color: var(--accent); font-size: 22px;
           display: flex; align-items: center; justify-content: center;
+          touch-action: manipulation;
+          -webkit-tap-highlight-color: transparent;
         }
 
         @media (max-width: 640px) {
@@ -113,7 +119,8 @@ export default function Navbar() {
         }
       `}</style>
 
-      <header className="navbar" ref={menuRef}>
+      <div ref={wrapperRef} style={{ display: 'contents' }}>
+      <header className="navbar">
         <div className="nav-inner">
           <Link className="brand" to="/" onClick={() => setOpen(false)}>
             <img className="mark" src={logo} alt="হরিনাভি দৃশ্যকাব্য" />
@@ -171,6 +178,7 @@ export default function Navbar() {
             <div style={{ fontSize: 12, color: 'var(--muted2)', marginTop: 2, fontFamily: 'var(--font-body)', fontWeight: 400 }}>{item.en}</div>
           </NavLink>
         ))}
+      </div>
       </div>
     </>
   )
