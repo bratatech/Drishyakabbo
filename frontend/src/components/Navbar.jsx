@@ -120,65 +120,65 @@ export default function Navbar() {
       `}</style>
 
       <div ref={wrapperRef} style={{ display: 'contents' }}>
-      <header className="navbar">
-        <div className="nav-inner">
-          <Link className="brand" to="/" onClick={() => setOpen(false)}>
-            <img className="mark" src={logo} alt="হরিনাভি দৃশ্যকাব্য" />
-            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15 }}>
-              <span style={{
-                fontFamily: 'var(--font-display)', fontSize: 17, fontWeight: 700,
-                background: 'linear-gradient(135deg, var(--text), var(--accent))',
-                WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-              }}>হরিনাভি দৃশ্যকাব্য</span>
-              <span style={{ fontSize: 9, letterSpacing: '1.8px', textTransform: 'uppercase', color: 'var(--muted2)', WebkitTextFillColor: 'var(--muted2)' }}>
-                Harinavi DrishyaKabbyo
-              </span>
-            </div>
-          </Link>
+        <header className="navbar">
+          <div className="nav-inner">
+            <Link className="brand" to="/" onClick={() => setOpen(false)}>
+              <img className="mark" src={logo} alt="হরিনাভি দৃশ্যকাব্য" />
+              <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15 }}>
+                <span style={{
+                  fontFamily: 'var(--font-display)', fontSize: 17, fontWeight: 700,
+                  background: 'linear-gradient(135deg, var(--text), var(--accent))',
+                  WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
+                }}>হরিনাভি দৃশ্যকাব্য</span>
+                <span style={{ fontSize: 9, letterSpacing: '1.8px', textTransform: 'uppercase', color: 'var(--muted2)', WebkitTextFillColor: 'var(--muted2)' }}>
+                  Harinavi DrishyaKabya
+                </span>
+              </div>
+            </Link>
 
-          {/* Desktop nav */}
-          <nav className="nav-links" aria-label="Main navigation">
-            {nav.map(item => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                end={item.to === '/'}
-                className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}
-                title={item.en}
-              >
-                {item.label}
-              </NavLink>
-            ))}
-          </nav>
+            {/* Desktop nav */}
+            <nav className="nav-links" aria-label="Main navigation">
+              {nav.map(item => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  end={item.to === '/'}
+                  className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}
+                  title={item.en}
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+            </nav>
 
-          {/* Hamburger (mobile only) */}
-          <button
-            className={`hamburger${open ? ' is-open' : ''}`}
-            onClick={() => setOpen(o => !o)}
-            aria-label={open ? 'Close menu' : 'Open menu'}
-            aria-expanded={open}
-          >
-            <span /><span /><span />
-          </button>
+            {/* Hamburger (mobile only) */}
+            <button
+              className={`hamburger${open ? ' is-open' : ''}`}
+              onClick={() => setOpen(o => !o)}
+              aria-label={open ? 'Close menu' : 'Open menu'}
+              aria-expanded={open}
+            >
+              <span /><span /><span />
+            </button>
+          </div>
+        </header>
+
+        {/* Full-screen mobile menu */}
+        <div className={`mobile-menu${open ? ' is-open' : ''}`} role="dialog" aria-label="Navigation menu">
+          <button className="mobile-close" onClick={() => setOpen(false)} aria-label="Close menu">✕</button>
+          {nav.map(item => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === '/'}
+              className={({ isActive }) => 'mobile-nav-link' + (isActive ? ' active' : '')}
+              onClick={() => setOpen(false)}
+            >
+              {item.label}
+              <div style={{ fontSize: 12, color: 'var(--muted2)', marginTop: 2, fontFamily: 'var(--font-body)', fontWeight: 400 }}>{item.en}</div>
+            </NavLink>
+          ))}
         </div>
-      </header>
-
-      {/* Full-screen mobile menu */}
-      <div className={`mobile-menu${open ? ' is-open' : ''}`} role="dialog" aria-label="Navigation menu">
-        <button className="mobile-close" onClick={() => setOpen(false)} aria-label="Close menu">✕</button>
-        {nav.map(item => (
-          <NavLink
-            key={item.to}
-            to={item.to}
-            end={item.to === '/'}
-            className={({ isActive }) => 'mobile-nav-link' + (isActive ? ' active' : '')}
-            onClick={() => setOpen(false)}
-          >
-            {item.label}
-            <div style={{ fontSize: 12, color: 'var(--muted2)', marginTop: 2, fontFamily: 'var(--font-body)', fontWeight: 400 }}>{item.en}</div>
-          </NavLink>
-        ))}
-      </div>
       </div>
     </>
   )
