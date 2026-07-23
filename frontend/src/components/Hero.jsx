@@ -78,15 +78,15 @@ export default function Hero() {
 
           <div className="hero-stats">
             <div>
-              <div className="hero-stat-num">১২+</div>
+              <div className="hero-stat-num">৮+</div>
               <div className="hero-stat-label">Productions</div>
             </div>
             <div>
-              <div className="hero-stat-num">৮ বছর</div>
+              <div className="hero-stat-num">8 বছর</div>
               <div className="hero-stat-label">On Stage</div>
             </div>
             <div>
-              <div className="hero-stat-num">৫০০+</div>
+              <div className="hero-stat-num"> ৫০০০+</div>
               <div className="hero-stat-label">Audience</div>
             </div>
           </div>

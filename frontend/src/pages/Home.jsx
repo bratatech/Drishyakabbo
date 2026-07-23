@@ -277,7 +277,7 @@ export default function Home() {
       </section>
 
       {/* JOIN CTA */}
-      <section className="container" style={{ paddingTop: 0 }}>
+      {/* <section className="container" style={{ paddingTop: 0 }}>
         <div style={{
           background: 'linear-gradient(135deg, rgba(192,57,43,.18) 0%, rgba(212,175,55,.1) 100%)',
           border: '1px solid var(--border)',
@@ -306,7 +306,7 @@ export default function Home() {
             <Link className="btn secondary" to="/contact">&#x0986;&#x09AE;&#x09BE;&#x09A6;&#x09C7;&#x09B0; &#x09B8;&#x09BE;&#x09A5;&#x09C7; &#x0995;&#x09A5;&#x09BE; &#x09AC;&#x09B2;&#x09C1;&#x09A8;</Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

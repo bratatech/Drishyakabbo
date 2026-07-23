@@ -1,17 +1,33 @@
 import React from 'react'
-import PageHeader from '../components/PageHeader.jsx'
-import { Link } from 'react-router-dom'
 
 export default function NotFound() {
   return (
-    <>
-      <PageHeader title="Page not found" />
-      <section className="container">
-        <p>The page you are looking for does not exist.</p>
-        <div className="cta-row">
-          <Link className="btn" to="/">Back to Home</Link>
-        </div>
-      </section>
-    </>
+    <section style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      padding: '60px 20px',
+      minHeight: '60vh',
+    }}>
+      <h2 style={{
+        marginBottom: '32px',
+        fontSize: '2rem',
+        fontWeight: '700',
+        letterSpacing: '0.02em',
+      }}>
+        Upcoming Event
+      </h2>
+      <img
+        src="/img25.jpeg"
+        alt="Upcoming Event"
+        style={{
+          width: '100%',
+          maxWidth: '900px',
+          borderRadius: '14px',
+          boxShadow: '0 6px 32px rgba(0,0,0,0.22)',
+          display: 'block',
+        }}
+      />
+    </section>
   )
 }

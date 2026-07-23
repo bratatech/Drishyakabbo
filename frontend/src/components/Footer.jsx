@@ -9,12 +9,12 @@ export default function Footer() {
           <div>
             <div className="brand">
               <span role="img" aria-label="mask">🎭</span>
-              <strong>Drishyakabbo</strong>
+              <strong>Drishyakabya</strong>
             </div>
             <p className="section">
               A creative home for contemporary Bengali theatre.
             </p>
-            <small>© {new Date().getFullYear()} Drishyakabbo</small>
+            <small>© {new Date().getFullYear()} Drishyakabya</small>
           </div>
           <div>
             <strong>Links</strong>
